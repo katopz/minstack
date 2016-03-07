@@ -10,6 +10,10 @@
     "build": "npm run env NODE_ENV=production && ncp src/index.html build/index.html && webpack -p",
     "deploy": "gh-pages -d build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katopz/minstack.git"
+  },
   "keywords": [
     "preact",
     "reux",
