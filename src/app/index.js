@@ -5,6 +5,8 @@ import TodoModel from './model';
 import TodoFooter from './footer';
 import TodoItem from './item';
 
+const REMOTE_DB_URL = null; // e.g. http://localhost:5984/dbname
+
 const ENTER_KEY = 13;
 
 const ALL_TODOS = 'all';
@@ -22,7 +24,7 @@ export default class App extends Component {
 
 	constructor() {
 		super();
-		this.model = new TodoModel('preact-todos');
+		this.model = new TodoModel(REMOTE_DB_URL);
 		this.model.subscribe( () => this.setState({}) );
 	}
 
