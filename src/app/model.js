@@ -2,98 +2,112 @@ import { uuid, store } from './util';
 import PouchDB from 'pouchdb';
 
 export default class TodoModel {
-	constructor(remoteCouch) {
+  constructor(remoteDBURL) {
     var self = this;
-    
-    this.remoteCouch = remoteCouch;
+
+    this.remoteDBURL = remoteDBURL;
     this.todos = [];
-		this.onChanges = [];
+    this.onChanges = [];
     
     // init
-    this.db = new PouchDB('todos');
-    this.db.changes({
+    this.localDB = new PouchDB('todos');
+    this.localDB.changes({
       since: 'now',
       live: true
-    }).on('change', function() {self.draw()});
-
-    // sync with remote?
-    if (this.remoteCouch) {
-      this.sync();
-    }
+    }).on('change', function () {
+      // something change
+      console.log('localDB.change');
+      self.draw();
+      self.syncAndDraw();
+    }).on('error', function (err) {
+      // totally unhandled error (shouldn't happen)
+      console.log('localDB.error : ', err);
+    });
     
-    // draw
+    // draw with localDB
     this.draw();
-	}
-  
+    
+    // then sync with remoteDB
+    this.remoteDB = new PouchDB(this.remoteDBURL);
+    this.syncAndDraw();
+  }
+
   draw() {
     var self = this;
-    this.db.allDocs({include_docs: true, descending: true}, function(err, doc) {
-      self.todos = doc.rows.map( todo => todo.doc );
+    this.localDB.allDocs({ include_docs: true, descending: true }, function (err, doc) {
+      var next_todos = doc.rows.map(todo => todo.doc);
+      // TODO : dirty check
+      self.todos = next_todos;
       self.publish();
     });
   }
 
-	subscribe(fn) {
-		this.onChanges.push(fn);
-	}
+  subscribe(fn) {
+    this.onChanges.push(fn);
+  }
 
-	publish() {
-    this.onChanges.forEach( cb => cb() );
-	}
+  publish() {
+    this.onChanges.forEach(cb => cb());
+  }
+  
+  syncAndDraw() {
+    var self = this;
+    // sync with remote
+    this.localDB.sync(this.remoteDB).on('change', function () {
+      // something change
+      console.log('remoteDB.change');
+      self.draw();
+    }).on('remoteDB.paused', function (info) {
+      // replication was paused, usually because of a lost connection
+      console.log('remoteDB.paused : ', info);
+    }).on('active', function (info) {
+      // replication was resumed
+      console.log('remoteDB.active : ', info);
+    }).on('error', function (err) {
+      // totally unhandled error (shouldn't happen)
+      console.log('remoteDB.error : ', err);
+    });
+  }
 
-	addTodo(title) {
+  addTodo(title) {
     var todo = {
-			"id": new Date().toISOString(),
       "_id": new Date().toISOString(),
-			"title": title,
-			"completed": false
-		};
+      "title": title,
+      "completed": false
+    };
 
-    this.db.put(todo, function callback(err, result) {
+    this.localDB.put(todo, function callback(err, result) {
       if (!err) {
         console.log('Successfully posted a todo!');
       }
     });
-	}
-
-  // Initialise a sync with the remote server
-  sync() {
-    console.log('data-sync-state : ', 'syncing');
-    var opts = {live: true};
-    this.db.replicate.to(this.remoteCouch, opts, this.syncError);
-    this.db.replicate.from(this.remoteCouch, opts, this.syncError);
   }
 
-  // There was some form or error syncing
-  syncError() {
-    console.log('data-sync-state : ', 'error');
-  }
-
-	toggleAll(completed) {
-		this.todos = this.todos.map(
-			todo => ({ ...todo, completed })
+  toggleAll(completed) {
+    this.todos = this.todos.map(
+      todo => ({ ...todo, completed })
 		);
 		this.publish();
 	}
 
-	toggle(todoToToggle) {
+  toggle(todoToToggle) {
     todoToToggle.completed = !todoToToggle.completed;
     this.db.put(todoToToggle);
-	}
+  }
 
-	destroy(todo) {
+  destroy(todo) {
     this.db.remove(todo);
-	}
+  }
 
-	save(todoToSave, title) {
+  save(todoToSave, title) {
     this.db.put(todoToSave);
-	}
+  }
 
-	clearCompleted() {
-    this.completed_todos = this.todos.filter( todo => {
+  clearCompleted() {
+    this.completed_todos = this.todos.filter(todo => {
       todo.completed ? todo._deleted = true : false;
       return todo.completed;
     });
     this.db.bulkDocs(this.completed_todos);
-	}
+  }
 }

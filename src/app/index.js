@@ -5,7 +5,7 @@ import TodoModel from './model';
 import TodoFooter from './footer';
 import TodoItem from './item';
 
-const REMOTE_DB_URL = null; // e.g. http://localhost:5984/dbname
+const REMOTE_DB_URL = 'http://localhost:5984/todos';
 
 const ENTER_KEY = 13;
 
@@ -67,7 +67,7 @@ export default class App extends Component {
 
 	@bind
 	edit(todo) {
-		this.setState({ editing: todo.id });
+		this.setState({ editing: todo._id });
 	}
 
 	@bind
@@ -123,7 +123,7 @@ export default class App extends Component {
 									onToggle={this.toggle.bind(this, todo)}
 									onDestroy={this.destroy.bind(this, todo)}
 									onEdit={this.edit.bind(this, todo)}
-									editing={editing === todo.id}
+									editing={editing === todo._id}
 									onSave={this.save.bind(this, todo)}
 									onCancel={this.cancel}
 								/>

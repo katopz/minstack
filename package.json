@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "Minimal and Fast Stack Starter Kit for Web Applications.",
   "scripts": {
-    "dev": "npm run env NODE_ENV=development && webpack-dev-server --inline --hot --progress",
+    "dev": "npm run env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "start": "superstatic build -p ${PORT:-8080} --host 0.0.0.0 --gzip -c '{\"rewrites\": [{\"source\":\"**\",\"destination\":\"index.html\"}],\"headers\":[{\"source\":\"**\",\"headers\":[{\"key\":\"Cache-Control\",\"value\":\"max-age=86400\"}]}]}'",
     "prestart": "npm run build",
     "prebuild": "mkdirp build",
-    "build": "npm run env NODE_ENV=production && ncp src/index.html build/index.html && webpack -p",
+    "build": "npm run env NODE_ENV=production ncp src/index.html build/index.html webpack -p",
     "deploy": "gh-pages -d build"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "http-server": "^0.9.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
+    "pouchdb-server": "^1.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"

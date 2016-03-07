@@ -3,6 +3,25 @@
 * [Redux](https://github.com/reactjs/redux)
 * [PouchDB](https://github.com/pouchdb/pouchdb)
 
+## Prequisites
+* [Homebrew](http://brew.sh/)
+```shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+* Production : [CouchDB](https://couchdb.apache.org/)
+```shell
+$ sudo apt-get install couchdb
+```
+* Development with `CouchDB`
+```shell
+$ brew install couchdb
+```
+* Development with `PouchDB`
+```shell
+$ npm install -g pouchdb-server
+$ pouchdb-server --port 5984
+```
+
 ## UI
 * [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
 
