@@ -92,15 +92,15 @@ export default class TodoModel {
 
   toggle(todoToToggle) {
     todoToToggle.completed = !todoToToggle.completed;
-    this.db.put(todoToToggle);
+    this.localDB.put(todoToToggle);
   }
 
   destroy(todo) {
-    this.db.remove(todo);
+    this.localDB.remove(todo);
   }
 
   save(todoToSave, title) {
-    this.db.put(todoToSave);
+    this.localDB.put(todoToSave);
   }
 
   clearCompleted() {
@@ -108,6 +108,6 @@ export default class TodoModel {
       todo.completed ? todo._deleted = true : false;
       return todo.completed;
     });
-    this.db.bulkDocs(this.completed_todos);
+    this.localDB.bulkDocs(this.completed_todos);
   }
 }
