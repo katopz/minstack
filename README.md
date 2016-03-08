@@ -4,14 +4,8 @@
 * [Firebase](https://www.firebase.com/)
 
 # Prerequisites
-* Local
-```shell
-$ npm run install
-```
-* Server
-```shell
-$ sudo apt-get install couchdb
-```
+* node ^4.0.0
+
 ## Develop
 * Debug
 ```shell
