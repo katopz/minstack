@@ -1,7 +1,7 @@
 # Stack
 * [Preact](https://github.com/developit/preact)
 * [Redux](https://github.com/reactjs/redux)
-* [CouchDB](https://couchdb.apache.org/)
+* [Firebase](https://www.firebase.com/)
 
 # Prerequisites
 * Local
@@ -47,5 +47,9 @@ $ npm run release
 - [ ] [Karma + Mocha](https://github.com/karma-runner/karma-mocha)
 - [x] [Hot module replacement](https://webpack.github.io/docs/hot-module-replacement.html)
 
-# Resource
-* [preact-todomvc](https://github.com/developit/preact-todomvc)
+# Offline Capabilities
+- [ ] [Service Worker](https://github.com/TalAter/UpUp)
+- [ ] [Firebase](https://www.firebase.com/docs/web/guide/offline-capabilities.html)
+
+# Starter
+- [x] [preact-todomvc](https://github.com/developit/preact-todomvc)
