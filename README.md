@@ -1,46 +1,51 @@
-## Stack
+# Stack
 * [Preact](https://github.com/developit/preact)
 * [Redux](https://github.com/reactjs/redux)
-* [PouchDB](https://github.com/pouchdb/pouchdb)
+* [CouchDB](https://couchdb.apache.org/)
 
-## Prequisites
-* [Homebrew](http://brew.sh/)
+# Prerequisites
+* Local
 ```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ npm run install
 ```
-* Production : [CouchDB](https://couchdb.apache.org/)
+* Server
 ```shell
 $ sudo apt-get install couchdb
 ```
-* Development with `CouchDB`
+## Develop
+* Debug
 ```shell
-$ brew install couchdb
+$ npm run dev
 ```
-* Development with `PouchDB`
+* Release
 ```shell
-$ npm install -g pouchdb-server
-$ pouchdb-server --port 5984
+$ npm run release
 ```
 
-## UI
-* [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
+# UI
+- [ ] [Reapp UI Kit](https://github.com/reapp/reapp-ui)
 
-## Bundler
-* [Webpack](https://github.com/webpack/webpack)
-* [Electron](https://github.com/atom/electron)
+# Bundler
+- [x] [Webpack](https://github.com/webpack/webpack)
+- [ ] [Rollup](https://github.com/rollup/rollup)
 
-## Distributions
-* Mobile/Desktop : [Electron](https://github.com/atom/electron)
+# Distributions
+- [ ] Web : Github Page
+- [ ] Database : [DigitalOcean](https://www.digitalocean.com/)
+- [ ] Protocol : HTTP2, [SSL](https://github.com/letsencrypt/letsencrypt)
+- [ ] CDN : [cloudflare](https://www.cloudflare.com)
+- [ ] Desktop : [Electron](https://github.com/atom/electron)
+- [ ] Mobile : [reapp]http://reapp.io/
 
-## Environments
-* [ES6](http://es6-features.org/)
-* [Babel](https://github.com/babel/babel)
-* CSS : [rucksack](https://github.com/simplaio/rucksack)
+# Environments
+- [x] [ES6](http://es6-features.org/)
+- [x] [Babel](https://github.com/babel/babel)
+- [ ] [rucksack](https://github.com/simplaio/rucksack)
 
-## Code coverage
-* [ESLint](http://eslint.org/)
-* Unit Test : [Karma + Mocha](https://github.com/karma-runner/karma-mocha)
-* [Hot module replacement](https://webpack.github.io/docs/hot-module-replacement.html)
+# Development Tools
+- [ ] [ESLint](http://eslint.org/)
+- [ ] [Karma + Mocha](https://github.com/karma-runner/karma-mocha)
+- [x] [Hot module replacement](https://webpack.github.io/docs/hot-module-replacement.html)
 
-## Resource
+# Resource
 * [preact-todomvc](https://github.com/developit/preact-todomvc)
