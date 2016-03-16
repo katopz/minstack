@@ -1,10 +1,11 @@
 # Stack
 * [Preact](https://github.com/developit/preact)
 * [Redux](https://github.com/reactjs/redux)
-* MongoDB
+* [MongoDB](https://www.mongodb.org)
 
 # Prerequisites
-* node ^4.0.0
+* [MongoDB](https://www.mongodb.org)
+* [NodeJS](https://nodejs.org)
 
 ## Develop
 * Debug
