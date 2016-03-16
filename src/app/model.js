@@ -1,44 +1,63 @@
 import { uuid, store } from './util';
-import Firebase from 'firebase';
+import * as _LowlaDB from 'lowladb/dist/lowladb';
 
 export default class TodoModel {
   constructor(remoteDBURL) {
     var self = this;
 
-    this.remoteDBURL = remoteDBURL;
-    this.todos = [];
+    // Preact
     this.onChanges = [];
 
-    // init
-    var user_id = "katopz";
-    // since I can connect from multiple devices or browser tabs, we store each connection instance separately
-    // any time that connectionsRef's value is null (i.e. has no children) I am offline
-    var myConnectionsRef = new Firebase(remoteDBURL + 'users/' + user_id + '/connections');
+    // Todos
+    this.todos = [];
 
-    // stores the timestamp of my last disconnect (the last time I was seen online)
-    var lastOnlineRef = new Firebase(remoteDBURL + 'users/' + user_id + '/last_seen');
+    // LowlaDB
+    var lowla = this.lowla = new _LowlaDB.LowlaDB({ datastore: 'IndexedDB' });
 
-    var connectedRef = new Firebase(remoteDBURL + '.info/connected');
-    connectedRef.on('value', function(snap) {
-      if (snap.val() === true) {
-        // We're connected (or reconnected)! Do anything here that should happen only if online (or on reconnect)
-        console.log('connected');
-        
-        // add this device to my connections list
-        // this value could contain info about the device or a timestamp too
-        var con = myConnectionsRef.push(true);
-
-        // when I disconnect, remove this device
-        con.onDisconnect().remove();
-
-        // when I disconnect, update the last time I was seen online
-        this.lastOnlineRef.onDisconnect().set(Firebase.ServerValue.TIMESTAMP);
-      } else {
-        // We're doom
-        console.log('disconnected');
-        // TODO : disconnect indicator.
-      }
+    lowla.on('pullBegin', function() {
+      console.log("Pull beginning");
     });
+    lowla.on('pushBegin', function() {
+      console.log("Push beginning");
+    });
+    lowla.on('syncBegin', function() {
+      console.log("Sync beginning");
+    });
+    lowla.on('pullEnd', function() {
+      console.log("Pull ended");
+    });
+    lowla.on('pushEnd', function() {
+      console.log("Push ended");
+    });
+    lowla.on('syncEnd', function() {
+      console.log("Sync ended");
+    });
+    this.todos_collection = lowla.collection('lowlaSample', 'todos');
+
+    // test insert
+    /*
+    this.todos_collection.insert({
+      id: new Date().valueOf(),
+      title: "hi",
+      completed: false
+    });
+    */
+    
+    lowla.sync(location.protocol + '//localhost:3000');
+    this.todos_collection.find({}).sort('title').on(function(err, cursor) {
+      //this.render(cursor);
+      console.log(cursor);
+      cursor.showPending().toArray().then(function(todos) {
+        console.log(todos);
+        self.todos = todos;
+        self.draw();
+      });
+
+    }.bind(this));
+
+    /*
+    // PouchDB
+    this.remoteDBURL = remoteDBURL;
     this.localDB = new PouchDB('todos');
     this.localDB.changes({
       since: 'now',
@@ -52,23 +71,29 @@ export default class TodoModel {
       // totally unhandled error (shouldn't happen)
       console.log('localDB.error : ', err);
     });
+    */
+
 
     // draw with localDB
     this.draw();
 
     // then sync with remoteDB
-    this.remoteDB = new PouchDB(this.remoteDBURL);
-    this.syncAndDraw();
+    //this.remoteDB = new PouchDB(this.remoteDBURL);
+    //this.syncAndDraw();
   }
 
   draw() {
     var self = this;
+    console.log(self.todos);
+    self.publish();
+    /*
     this.localDB.allDocs({ include_docs: true, descending: true }, function(err, doc) {
       var next_todos = doc.rows.map(todo => todo.doc);
       // TODO : dirty check
       self.todos = next_todos;
       self.publish();
     });
+    */
   }
 
   subscribe(fn) {
@@ -119,24 +144,24 @@ export default class TodoModel {
 		this.publish();
 	}
 
-toggle(todoToToggle) {
-  todoToToggle.completed = !todoToToggle.completed;
-  this.localDB.put(todoToToggle);
-}
+  toggle(todoToToggle) {
+    todoToToggle.completed = !todoToToggle.completed;
+    this.localDB.put(todoToToggle);
+  }
 
-destroy(todo) {
-  this.localDB.remove(todo);
-}
+  destroy(todo) {
+    this.localDB.remove(todo);
+  }
 
-save(todoToSave, title) {
-  this.localDB.put(todoToSave);
-}
+  save(todoToSave, title) {
+    this.localDB.put(todoToSave);
+  }
 
-clearCompleted() {
-  this.completed_todos = this.todos.filter(todo => {
-    todo.completed ? todo._deleted = true : false;
-    return todo.completed;
-  });
-  this.localDB.bulkDocs(this.completed_todos);
-}
+  clearCompleted() {
+    this.completed_todos = this.todos.filter(todo => {
+      todo.completed ? todo._deleted = true : false;
+      return todo.completed;
+    });
+    this.localDB.bulkDocs(this.completed_todos);
+  }
 }
