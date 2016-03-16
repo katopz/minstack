@@ -1,13 +1,13 @@
 # Stack
 * [Preact](https://github.com/developit/preact)
 * [Redux](https://github.com/reactjs/redux)
-* [MongoDB](https://www.mongodb.org)
+* [PouchDB](https://github.com/pouchdb/pouchdb)
 
 # Prerequisites
-* [MongoDB](https://www.mongodb.org)
 * [NodeJS](https://nodejs.org)
+* [CouchDB](https://couchdb.apache.org/)
 
-## Develop
+# Run
 * Debug
 ```shell
 $ npm run dev
@@ -15,6 +15,22 @@ $ npm run dev
 * Release
 ```shell
 $ npm run release
+```
+
+# Development 
+## Local Server
+* Development with `PouchDB`
+```shell
+$ npm install -g pouchdb-server
+$ pouchdb-server --port 5984
+```
+* Development with `CouchDB`
+```shell
+$ brew install couchdb
+```
+## Remote Server
+```shell
+$ sudo apt-get install couchdb
 ```
 
 # UI

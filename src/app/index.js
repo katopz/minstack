@@ -5,7 +5,7 @@ import TodoModel from './model';
 import TodoFooter from './footer';
 import TodoItem from './item';
 
-const REMOTE_DB_URL = 'https://minstack.firebaseapp.com';
+const REMOTE_DB_URL = 'http://localhost:5984/todos';
 
 const ENTER_KEY = 13;
 
