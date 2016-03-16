@@ -36,6 +36,9 @@ $ sudo apt-get install couchdb
 # UI
 - [ ] [Material-UI](https://github.com/callemall/material-ui)
 
+# Authentication
+- [ ] [redux-auth](https://github.com/lynndylanhurley/redux-auth)
+
 # Bundler
 - [x] [Webpack](https://github.com/webpack/webpack)
 - [ ] [Rollup](https://github.com/rollup/rollup)
