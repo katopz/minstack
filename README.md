@@ -62,14 +62,11 @@ $ sudo apt-get install couchdb
 - [ ] [ESLint](http://eslint.org/)
 - [ ] [Karma + Mocha](https://github.com/karma-runner/karma-mocha)
 - [x] [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
-- [ ] [Server Side Rendering](https://webpack.github.io/docs/hot-module-replacement.html)
+- [ ] [Server Side Rendering](http://redux.js.org/docs/recipes/ServerRendering.html)
 
-# Offline Capabilities
+# Offline and Sync Capabilities
 - [ ] [Service Worker](https://github.com/TalAter/UpUp)
-- [ ] [localForage](mozilla.github.io/localForage)
-
-# Sync Capabilities
-- [ ] [lowladb](https://github.com/lowla/lowladb-json-database)
+- [x] [PouchDB](https://github.com/pouchdb/pouchdb)
 
 # Starter
 - [x] [preact-todomvc](https://github.com/developit/preact-todomvc)
