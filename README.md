@@ -40,15 +40,22 @@ $ sudo apt-get install couchdb
 - [x] [Webpack](https://github.com/webpack/webpack)
 - [ ] [Rollup](https://github.com/rollup/rollup)
 
-# Distributions
-- [ ] Web Site : Github Page
-- [ ] Fetch Database : [Octokat](https://github.com/philschatz/octokat.js)
-- [ ] Master Database : [mlabs](https://mlab.com)
-- [ ] Slave Database : [DigitalOcean](https://www.digitalocean.com)
-- [ ] Protocol : HTTP2, [SSL](https://github.com/letsencrypt/letsencrypt)
-- [ ] CDN : [cloudflare](https://www.cloudflare.com)
+# Data Center
+- [ ] Static Page : Jekyll via Github Page
+- [ ] Prerender Data : [Octokat](https://github.com/philschatz/octokat.js)
+- [ ] Master Database : [DigitalOcean](https://www.digitalocean.com)
+- [ ] Slave Database : [mlabs](https://mlab.com)
+
+# Application
 - [ ] Desktop : [Electron](https://github.com/atom/electron)
 - [ ] Mobile : react-native, cordova
+
+# Speed
+- [ ] https://developers.google.com/speed/
+- [ ] CDN : [cloudflare](https://www.cloudflare.com)
+
+# Secure
+- [ ] Protocol : HTTP2, [SSL](https://github.com/letsencrypt/letsencrypt) https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/
 
 # Environments
 - [x] [ES6](http://es6-features.org/)
