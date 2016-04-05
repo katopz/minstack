@@ -55,7 +55,7 @@ $ sudo apt-get install couchdb
 - [ ] CDN : [cloudflare](https://www.cloudflare.com)
 
 # Secure
-- [ ] Protocol : HTTP2, [SSL](https://github.com/letsencrypt/letsencrypt) https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/
+- [x] Protocol : HTTP2, [SSL](https://github.com/letsencrypt/letsencrypt) https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/
 
 # Environments
 - [x] [ES6](http://es6-features.org/)
