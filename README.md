@@ -52,6 +52,7 @@ $ sudo apt-get install couchdb
 
 # Speed
 - [ ] https://developers.google.com/speed/
+- [ ] https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration
 - [ ] CDN : [cloudflare](https://www.cloudflare.com)
 
 # Secure
