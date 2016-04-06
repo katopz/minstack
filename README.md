@@ -70,6 +70,9 @@ $ sudo apt-get install couchdb
 # Development
 - [ ] [ESLint](http://eslint.org/)
 - [ ] [Karma + Mocha](https://github.com/karma-runner/karma-mocha)
+- [ ] [istanbul](https://github.com/gotwarlost/istanbul) for code coverage analysis
+- [ ] [docco](http://jashkenas.github.io/docco/) for developer documentation
+- [ ] [bunyan](https://github.com/trentm/node-bunyan) for logging
 - [x] [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
 - [ ] [Server Side Rendering](https://webpack.github.io/docs/hot-module-replacement.html)
 
