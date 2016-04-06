@@ -61,6 +61,7 @@ $ sudo apt-get install couchdb
 
 # Solid
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
+- [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04) 
 
 # Environments
 - [x] [ES6](http://es6-features.org/)
