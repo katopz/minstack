@@ -53,6 +53,8 @@ $ sudo apt-get install couchdb
 # Speed
 - [x] [nginx](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
 - [x] [gzip](https://gist.github.com/katopz/576e19256b4b5a3bf0e131a60c20d27b)
+- [ ] [HTTP Strict Transport Security (HSTS)](https://zoompf.com/blog/2014/08/ssl-performance-diary-2-http-strict-transport-security)
+- [ ] [Domain Sharding](http://calendar.perfplanet.com/2013/reducing-domain-sharding/)
 - [ ] CDN : [cloudflare](https://www.cloudflare.com)
 
 # Secure
@@ -82,7 +84,7 @@ $ sudo apt-get install couchdb
 - [ ] [localForage](mozilla.github.io/localForage)
 
 # Sync Capabilities
-- [ ] [PouchDB](https://github.com/pouchdb/pouchdb)
+- [x] [PouchDB](https://github.com/pouchdb/pouchdb)
 
 # Starter
 - [x] [preact-todomvc](https://github.com/developit/preact-todomvc)
