@@ -37,24 +37,25 @@ $ sudo apt-get install couchdb
 - [ ] [NameCheap](https://www.namecheap.com/?aff=99054)
 - [ ] [Sub domain](http://blog.karlsolgard.net/how-i-set-up-this-subdomain-in-nginx-on-digital-ocean/)
 
-# Authentication
-- [ ] []()
-
-# Dashboard UI
-- [ ] [Material-UI](https://github.com/developit/preact-mdl)
-
-# Bundler
-- [x] [Webpack](https://github.com/webpack/webpack)
-- [ ] [Rollup](https://github.com/rollup/rollup)
-
 # Server
 - [ ] Static Page : Jekyll via [Github Page](https://www.npmjs.com/package/gh-pages)
 - [ ] Prerender Data : [Octokat](https://github.com/philschatz/octokat.js)
 - [ ] Master Database : [DigitalOcean](https://www.digitalocean.com/?refcode=6dcfcc2a3392)
 - [ ] Slave Database : [mlabs](https://mlab.com)
 
+# UI
+- [ ] [Material-UI](https://github.com/developit/preact-mdl)
+
+# Authentication
+- [ ] [pouchdb-authentication](https://github.com/nolanlawson/pouchdb-authentication)
+- [ ] [redux-auth](https://github.com/lynndylanhurley/redux-auth)
+
+# Bundler
+- [x] [Webpack](https://github.com/webpack/webpack)
+- [ ] [Rollup](https://github.com/rollup/rollup)
+
 # Application
-- [ ] Desktop : [Electron](https://github.com/atom/electron)
+- [ ] Desktop : [Electron](https://github.com/atom/electron),  [hello-electron-with-pouchdb](https://github.com/nolanlawson/hello-electron-with-pouchdb)
 - [ ] Mobile : react-native, cordova
 
 # Speed
