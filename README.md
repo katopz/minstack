@@ -41,7 +41,7 @@ $ sudo apt-get install couchdb
 - [ ] [Rollup](https://github.com/rollup/rollup)
 
 # Data Center
-- [ ] Static Page : Jekyll via Github Page
+- [ ] Static Page : Jekyll via [Github Page](https://www.npmjs.com/package/gh-pages)
 - [ ] Prerender Data : [Octokat](https://github.com/philschatz/octokat.js)
 - [ ] Master Database : [DigitalOcean](https://www.digitalocean.com)
 - [ ] Slave Database : [mlabs](https://mlab.com)
