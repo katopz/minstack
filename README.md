@@ -33,17 +33,24 @@ $ brew install couchdb
 $ sudo apt-get install couchdb
 ```
 
-# UI
-- [ ] [Material-UI](https://github.com/callemall/material-ui)
+# Domain
+- [ ] [NameCheap](https://www.namecheap.com/?aff=99054)
+- [ ] [Sub domain](http://blog.karlsolgard.net/how-i-set-up-this-subdomain-in-nginx-on-digital-ocean/)
+
+# Authentication
+- [ ] []()
+
+# Dashboard UI
+- [ ] [Material-UI](https://github.com/developit/preact-mdl)
 
 # Bundler
 - [x] [Webpack](https://github.com/webpack/webpack)
 - [ ] [Rollup](https://github.com/rollup/rollup)
 
-# Data Center
+# Server
 - [ ] Static Page : Jekyll via [Github Page](https://www.npmjs.com/package/gh-pages)
 - [ ] Prerender Data : [Octokat](https://github.com/philschatz/octokat.js)
-- [ ] Master Database : [DigitalOcean](https://www.digitalocean.com)
+- [ ] Master Database : [DigitalOcean](https://www.digitalocean.com/?refcode=6dcfcc2a3392)
 - [ ] Slave Database : [mlabs](https://mlab.com)
 
 # Application
