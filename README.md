@@ -68,10 +68,12 @@ $ sudo apt-get install couchdb
 # Secure
 - [x] Protocol : HTTP2, SSL via [letsecure.me](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/)
 - [x] [HTTP2+SSL // sudo nano /etc/nginx/conf.d/default.conf](https://gist.github.com/katopz/0942b530212f81c3a8b0a9dc57a05d89)
+- [x] Github Page SSL : [CloudFlare](https://rck.ms/jekyll-github-pages-custom-domain-gandi-https-ssl-cloudflare/)
 
-# Solid
+# Maintain
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
-- [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04) 
+- [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
+- [ ] [PM2](https://github.com/Unitech/pm2)
 
 # Environments
 - [x] [ES6](http://es6-features.org/)
