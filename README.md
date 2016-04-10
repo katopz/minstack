@@ -37,6 +37,7 @@ $ sudo apt-get install couchdb
 - [ ] [NameCheap](https://www.namecheap.com/?aff=99054)
 - [ ] [Sub domain](http://blog.karlsolgard.net/how-i-set-up-this-subdomain-in-nginx-on-digital-ocean/)
 - [ ] [Setup mail forwarding in postfix on Ubuntu or Debian](http://www.binarytides.com/postfix-mail-forwarding-debian/)
+- [ ] [Configuring Mailgun DNS entries on Digital Ocean](http://dangeroustestlab.net/configuring-mailgun-dns-on-digital-ocean/)
 - [ ] [Domain Sharding](http://calendar.perfplanet.com/2013/reducing-domain-sharding/)
 - [ ] CDN : [cloudflare](https://www.cloudflare.com)
 
