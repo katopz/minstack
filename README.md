@@ -36,7 +36,7 @@ $ sudo apt-get install couchdb
 # Domain
 - [ ] [NameCheap](https://www.namecheap.com/?aff=99054)
 - [ ] [Sub domain](http://blog.karlsolgard.net/how-i-set-up-this-subdomain-in-nginx-on-digital-ocean/)
-- [ ] [Setup mail forwarding in postfix on Ubuntu or Debian](http://www.binarytides.com/postfix-mail-forwarding-debian/)
+- [ ] [Email forwarding in postfix on Ubuntu or Debian](http://www.binarytides.com/postfix-mail-forwarding-debian/)
 - [ ] [Configuring Mailgun DNS entries on Digital Ocean](http://dangeroustestlab.net/configuring-mailgun-dns-on-digital-ocean/)
 - [ ] [Domain Sharding](http://calendar.perfplanet.com/2013/reducing-domain-sharding/)
 - [ ] CDN : [cloudflare](https://www.cloudflare.com)
@@ -78,6 +78,7 @@ $ sudo nano /etc/nginx/nginx.conf
 - [x] [/etc/nginx/nginx.conf](https://gist.github.com/katopz/576e19256b4b5a3bf0e131a60c20d27b)
 - [x] [gzip](https://mattstauffer.co/blog/enabling-gzip-on-nginx-servers-including-laravel-forge)
 - [ ] [optimize](https://leandromoreira.com.br/2015/10/12/how-to-optimize-nginx-configuration-for-http2-tls-ssl/)
+- [ ] [CORS](http://enable-cors.org/server_nginx.html)
 
 # Maintain
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
