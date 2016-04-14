@@ -113,3 +113,7 @@ $ sudo nano /etc/nginx/nginx.conf
 # Starter
 - [x] [preact-todomvc](https://github.com/developit/preact-todomvc)
 - [ ] [mern](https://github.com/Hashnode/mern-starter)
+
+# Design 
+## Icons
+- [x] http://stackoverflow.com/questions/2268204/favicon-dimensions
