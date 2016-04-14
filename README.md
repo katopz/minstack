@@ -72,7 +72,8 @@ $ sudo nano /etc/nginx/conf.d/default.conf
 - [x] [/etc/nginx/conf.d/default.conf](https://gist.github.com/katopz/0942b530212f81c3a8b0a9dc57a05d89)
 - [x] [letsecure.me](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/)
 - [x] Github Page SSL : [Manual](https://blog.kloudsec.com/how-to-setup-github-custom-domain-with-https/) or  [CloudFlare](https://rck.ms/jekyll-github-pages-custom-domain-gandi-https-ssl-cloudflare/)
-- [x] [optimize](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
+- [x] [Deploying Diffie-Hellman for TLS](https://weakdh.org/sysadmin.html)
+- [x] [How To Secure Nginx with Let's Encrypt on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04)
 
 # Nginx Config
 ```
@@ -80,7 +81,9 @@ $ sudo nano /etc/nginx/nginx.conf
 ```
 - [x] [/etc/nginx/nginx.conf](https://gist.github.com/katopz/576e19256b4b5a3bf0e131a60c20d27b)
 - [x] [gzip](https://mattstauffer.co/blog/enabling-gzip-on-nginx-servers-including-laravel-forge)
-- [ ] [optimize](https://leandromoreira.com.br/2015/10/12/how-to-optimize-nginx-configuration-for-http2-tls-ssl/)
+- [x] [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+- [x] [How To Optimize Nginx Configuration](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
+- [ ] [How To Optimize Nginx Configuration for HTTP/2 TLS (SSL)](https://leandromoreira.com.br/2015/10/12/how-to-optimize-nginx-configuration-for-http2-tls-ssl/)
 - [ ] [HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
 - [ ] [CORS](http://enable-cors.org/server_nginx.html)
 
