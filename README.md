@@ -84,6 +84,8 @@ $ sudo nano /etc/nginx/nginx.conf
 - [x] [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 - [x] [How To Optimize Nginx Configuration](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
 - [ ] [How To Optimize Nginx Configuration for HTTP/2 TLS (SSL)](https://leandromoreira.com.br/2015/10/12/how-to-optimize-nginx-configuration-for-http2-tls-ssl/)
+- [ ] [Hardening your HTTP response headers](https://scotthelme.co.uk/hardening-your-http-response-headers/)
+- [ ] [Content Security Policy - An Introduction](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 - [ ] [HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
 - [ ] [CORS](http://enable-cors.org/server_nginx.html)
 
