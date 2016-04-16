@@ -90,7 +90,6 @@ $ sudo nano /etc/nginx/nginx.conf
 ```
 - [x] [/etc/nginx/nginx.conf](https://gist.github.com/katopz/576e19256b4b5a3bf0e131a60c20d27b)
 - [x] [gzip](https://mattstauffer.co/blog/enabling-gzip-on-nginx-servers-including-laravel-forge)
-
 - [x] [How To Optimize Nginx Configuration](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
  
 # Maintain
