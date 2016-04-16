@@ -97,9 +97,11 @@ $ sudo nano /etc/nginx/nginx.conf
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
 - [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
 - [ ] [PM2](https://github.com/Unitech/pm2)
+- [ ] [Netdata](http://netdata.firehol.org/)
 
 # Scale
 - [ ] [HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
+- [ ] [Carina](https://getcarina.com/docs/overview-of-carina/)
 
 # Environments
 - [x] [ES6](http://es6-features.org/)
@@ -125,6 +127,8 @@ $ sudo nano /etc/nginx/nginx.conf
 # Starter
 - [x] [preact-todomvc](https://github.com/developit/preact-todomvc)
 - [ ] [mern](https://github.com/Hashnode/mern-starter)
+- [ ] [Progressive WebApp](http://www.pocketjavascript.com/blog/2015/11/23/introducing-pokedex-org)
+- [ ] [Building the F8 2016 App](http://makeitopen.com/)
 
 # Design 
 ## Icons
