@@ -93,7 +93,7 @@ $ sudo nano /etc/nginx/nginx.conf
 - [x] [How To Optimize Nginx Configuration](https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration)
 - [ ] [Optimizing NGINX Speed for Serving Content](https://www.nginx.com/resources/admin-guide/serving-static-content/)
 - [ ] [A Guide to Caching with NGINX](https://www.nginx.com/blog/nginx-caching-guide/)
- 
+- [ ] [Nginx Caching](https://serversforhackers.com/nginx-caching/)
 # Monitoring
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
 - [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
