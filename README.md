@@ -98,7 +98,7 @@ $ sudo nano /etc/nginx/nginx.conf
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
 - [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
 - [ ] [PM2](https://github.com/Unitech/pm2)
-- [ ] [Netdata](http://netdata.firehol.org/)
+- [x] [Netdata](http://netdata.firehol.org/)
 - [x] [SSL Report: rabbot.io](https://www.ssllabs.com/ssltest/analyze.html?d=rabbot.io&hideResults=on&latest)
 - [x] [Security Report Summary](https://securityheaders.io/?q=https%3A%2F%2Frabbot.io%2F&hide=on)
 
