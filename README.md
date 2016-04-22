@@ -1,3 +1,5 @@
+![http://blog.differential.com/three-reasons-not-to-build-that-application-just-yet/](https://cloud.githubusercontent.com/assets/97060/14728245/1e1395be-085d-11e6-9513-c60ad94addb0.jpg)
+
 # Stack
 * [Preact](https://github.com/developit/preact)
 * [Redux](https://github.com/reactjs/redux)
