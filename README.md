@@ -50,6 +50,7 @@ $ sudo apt-get install couchdb
 - [ ] Prerender Data : [Octokat](https://github.com/philschatz/octokat.js)
 - [ ] Master Database : [DigitalOcean](https://www.digitalocean.com/?refcode=6dcfcc2a3392)
 - [ ] Slave Database : [mlabs](https://mlab.com)
+- [ ] [IPV6](https://developer.apple.com/library/mac/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/UnderstandingandPreparingfortheIPv6Transition/UnderstandingandPreparingfortheIPv6Transition.html#//apple_ref/doc/uid/TP40010220-CH213-SW1)
 
 # CORS
 - [ ] [xdomain](https://github.com/jpillora/xdomain)
