@@ -103,11 +103,14 @@ $ sudo nano /etc/nginx/nginx.conf
 # Monitoring
 - [ ] [Zero down time](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/)
 - [ ] [Error Page](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
-- [ ] ~~[PM2](https://github.com/Unitech/pm2)~~
+- [ ] [PM2](https://github.com/Unitech/pm2)
 - [x] [Netdata](http://netdata.firehol.org/)
+
+# Security
 - [x] [SSL Report: rabbot.io](https://www.ssllabs.com/ssltest/analyze.html?d=rabbot.io&hideResults=on&latest)
 - [x] [Security Report Summary](https://securityheaders.io/?q=https%3A%2F%2Frabbot.io%2F&hide=on)
 - [x] [RKHunter](https://help.ubuntu.com/community/RKhunter)
+- [ ] [Docker Bench for Security](https://github.com/docker/docker-bench-security)
 
 # Scale
 - [ ] [HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
