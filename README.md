@@ -107,7 +107,7 @@ $ sudo nano /etc/nginx/nginx.conf
 - [ ] [Netdata](http://netdata.firehol.org/)
 - [ ] [docker-monitoring](https://www.brianchristner.io/how-to-setup-docker-monitoring/)
 - [ ] [cadvisor](https://github.com/google/cadvisor)
-- 
+
 # Security
 - [x] [SSL Report: rabbot.io](https://www.ssllabs.com/ssltest/analyze.html?d=rabbot.io&hideResults=on&latest)
 - [x] [Security Report Summary](https://securityheaders.io/?q=https%3A%2F%2Frabbot.io%2F&hide=on)
